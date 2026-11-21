@@ -1,0 +1,28 @@
+strategy:
+  swing_left_bars: 3
+  swing_right_bars: 3
+  breakout_buffer_points: 5.0
+  large_gap_points: 75.0
+  fallback_reward_risk: 2.0
+  min_level_reward_risk: 2.0
+  opening_confirmation_timeframe: "15min"
+  entry_timeframe: "5min"
+
+risk:
+  lots_per_trade: 1
+  # IMPORTANT: update this from the current NIFTY Futures contract specification.
+  # Do not assume lot size remains constant.
+  units_per_lot: 0
+  max_trades_per_day: 3
+  max_daily_loss_inr: 3500.0
+  max_simultaneous_positions: 1
+
+costs:
+  brokerage_per_order_inr: 20.0
+  # Configure actual charges/slippage before relying on net P&L.
+  estimated_round_trip_cost_per_unit_inr: 0.0
+
+backtest:
+  timezone: "Asia/Kolkata"
+  same_bar_stop_target_policy: "stop_first"
+  output_dir: "outputs"
